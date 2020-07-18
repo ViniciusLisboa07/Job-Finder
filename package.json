@@ -1,0 +1,29 @@
+{
+  "name": "jobfi",
+  "version": "1.0.0",
+  "description": "This application is a portal to find jobs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusLisboa07/Job-Finder.git"
+  },
+  "author": "Vinícius Lisboa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusLisboa07/Job-Finder/issues"
+  },
+  "homepage": "https://github.com/ViniciusLisboa07/Job-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "sequelize": "^6.3.3",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
