@@ -11,19 +11,19 @@ router.get('/test', (req, res) =>{
 
 router.post('/add', (req, res)=>{
 
-    let {tittle, salary, company, description, email, new_job} = req.body;
+    let {title, salary, company, description, email, new_job} = req.body;
 
     // insert
     Job.create({
-        tittle,
+        title,
         salary,
         description,
         company,
         email,
         new_job
     })
-    .them(() => res.redirect('/')
-    .catch(err => console.log(err)));
+    .then(() => res.redirect('/'))
+    .catch(err => console.log(err));
 });
 
 module.exports = router
