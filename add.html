@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Job Finder</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Job Finder</a>
+            <button class="navbar-toggler" type="button" data-toggler="collapse" data-taget="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ver Vagas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="add.html">Abrir Vaga</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="add-form-container" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Divulgue a vaga preenchendo o formulário</h1>
+            </div>
+            <div id="form-box" class="col-md-12">
+                <h2>Preencha os dados da melhor forma possível para encontrar logo seu DEV!</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="title">Título da vaga:</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título da vaga." required>
+                        <small id="titleHelp" class="form-text text-muted">O título é muito importante, seja claro e objetivo!</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="descrition">Descrição da vaga:</label>
+                        <textarea type="text" class="form-control" id="descrition" name="descrition" placeholder="Descreva as atividades do desenvolvedor" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa contratante:</label>
+                        <input type="text" class="form-control" id="company" name="company" placeholder="Digite o nome da empresa contratente" required>                       
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail do contratente:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite o e-mail para contato" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salário:</label>
+                        <input type="text" class="form-control" id="salary" name="salary" placeholder="Digite o salário da vaga." required>
+                    </div>
+
+                    <input type="hidden" name="new_job" value="1">
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
