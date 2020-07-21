@@ -41,29 +41,35 @@ app.get('/', (req, res) =>{
     let search = req.query.job;
     let query = '%'+search+'%';  // PH -> PHP ; Word -> Wordpress ; press -> Wordpress
 
-    if(!search){
+    if(!search) {
         Job.findAll({order: [
+          ['createdAt', 'DESC']
+        ]})
+        .then(jobs => {
+      
+          res.render('index', {
+            jobs
+          });
+      
+        })
+        .catch(err => console.log(err));
+      } else {
+        Job.findAll({
+          where: {title: {[Op.like]: query}},
+          order: [
             ['createdAt', 'DESC']
         ]})
-        .then(jobs =>{
-            res.render('index', {
-                jobs
-            });
+        .then(jobs => {
+          console.log(search);
+          console.log(search);
+      
+          res.render('index', {
+            jobs, search
+          });
+      
         })
         .catch(err => console.log(err));
-    }else{
-        Job.findAll({
-            where: {title: {[Op.like]: search}},
-            order: [
-                ['createdAt', 'DESC']
-        ]})
-        .then(jobs =>{
-            res.render('index', {
-                jobs, search
-            });
-        })
-        .catch(err => console.log(err));
-    }
+      }
 
 });
 
