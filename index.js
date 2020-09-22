@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // handle bars
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayou: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // static folder
